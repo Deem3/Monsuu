@@ -1,0 +1,91 @@
+@import url('../root.css');
+
+body{
+    font-family: var(--inter-font);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* footer */
+
+footer{
+    font-family: var(--montserrat-font);
+    background-color: var(--footer-bg-color);
+    color: var(--footer-color);
+    height: 26.25rem;
+    font-size: 0.9375rem;
+    padding-left: 3.75rem;
+    padding-right: 3.75rem;
+    margin: 0;
+}
+
+footer>ul{
+    display: grid;
+    align-items: end;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;  
+    grid-template-columns: 0.4fr 0.4fr 1fr 1fr 1fr 0.4fr 0.4fr;
+    list-style: none;
+    height: 11.875rem;
+    border-bottom: var(--footer-color) 1px solid;
+    padding: 0;
+}
+footer>ul>li>a{
+    color: var(--footer-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer>ul>li:first-child{
+    justify-self: start;
+}
+
+footer>ul>li:last-child{
+    justify-self: end;
+}
+
+.brand__name{
+    grid-column-start: 3;
+    grid-column-end: 6;
+    font-size: 2.5rem;
+}
+
+/* address section */
+
+address{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+address>h2{
+    font-size: 0.9375rem;
+    width: 14.375rem;
+    justify-self: start;
+}
+
+.social__address{
+    display: flex;
+    
+}
+
+.social__address>*{
+    width: 3.125rem;
+    height: 3.125rem;
+    margin-right: 3.125rem;
+    margin-left: 3.125rem;
+}
+
+.footer__copyright{
+    text-align: center;
+    font-weight: 100;
+    font-size: 0.9375rem;
+    margin-top: 3.125rem;
+}
