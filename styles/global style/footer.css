@@ -27,12 +27,11 @@ footer{
 footer>ul{
     display: grid;
     align-items: end;
-    justify-content: center;
     align-content: center;
     justify-items: center;  
     grid-template-columns: 0.4fr 0.4fr 1fr 1fr 1fr 0.4fr 0.4fr;
     list-style: none;
-    height: 11.875rem;
+    height: 11rem;
     border-bottom: var(--footer-color) 1px solid;
     padding: 0;
 }

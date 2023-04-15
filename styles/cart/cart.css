@@ -1,0 +1,21 @@
+@import url('../root.css');
+
+body{
+    font-family: var(--inter-font);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+/* main section */
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+

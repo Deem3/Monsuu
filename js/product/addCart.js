@@ -17,7 +17,7 @@ const handleProd = (id) => {
     else{
         localStorage.setItem('id', id)
     }
-    setTimeout(()=>{
+    // setTimeout(()=>{
         window.location.href = 'eachProduct.html'
-    }, 500)
+    // }, 500)
 }
