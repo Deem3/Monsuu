@@ -59,13 +59,8 @@ const checkLoaded = setInterval(()=>{
         }
       };
       
-      const order = () => {
-        const myProd = {
-          "id": localStorage.getItem('id'),
-          "stock": counter
-        };
-        const jsonOrder = JSON.stringify(myProd);
-        localStorage.setItem(localStorage.getItem('id'), jsonOrder);
+      const order = () => {        
+        localStorage.setItem(localStorage.getItem('id'), counter);
       };
       
       return {

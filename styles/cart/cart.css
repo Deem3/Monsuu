@@ -1,15 +1,5 @@
 @import url('../root.css');
 
-body{
-    font-family: var(--inter-font);
-    background-color: var(--bg-color);
-    margin: 0;
-    padding: 0;
-}
-a{
-    text-decoration: none;
-    color: var(--primary-color);
-}
 /* main section */
 
 main{
@@ -17,5 +7,99 @@ main{
     grid-template-columns: repeat(2, 1fr);
     margin-left: 15rem;
     margin-right: 15rem;
+    padding-top: 10%;
+    padding-bottom: 10%;
 }
 
+.first_section{
+    padding-right: 1.875rem;
+}
+.second_section{
+    padding-left: 1.875rem;
+}
+
+
+.each_product{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    border: #eeee 1px solid;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+.each_product>img{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 154px;
+    height: 154px;
+}
+
+
+/* counter button */
+
+.counter_btn{
+    display: flex;
+    border: black 2px solid;
+    border-radius: 9px;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 4.5rem;
+    grid-column-start: 3;
+    overflow: hidden;
+}
+
+.counter_btn>*{
+    width: 1.5rem;
+    text-align: center;
+}
+.counter_btn>button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    height: 100%;
+}
+
+.counter_btn>*:first-child{
+    border-right: 2px solid black;
+}
+
+.counter_btn>*:last-child{
+    border-left: 2px solid black;
+}
+
+.delete_btn{
+    border: black 2px solid;
+    border-radius: 3px;
+    background-color: white;
+}
+
+/* cart section */
+
+.cart_info{
+    border-top: 1px #dfdfdf solid;
+    border-bottom: 1px #dfdfdf solid;
+    display: grid;
+    grid-template-rows: repeat(5,1fr);
+}
+
+.cart_info>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.cart_info>button{
+    background-color: #424242;
+    border-radius: 9px;
+    color: white;
+    font-size: 18px;
+    font-family: var(--inter-font);
+    width: 19.375rem;
+    height: 3.75rem;
+    justify-self: center;
+}
