@@ -68,7 +68,7 @@ fetch("/json/products.json")
                 <h2>Нийт төлбөр</h2>
                 <h2>${totalPrice+5000}₮</h2>
             </div>
-            <button>Төлбөр төлөх</button>
+            <button onclick="handlePayment()">Төлбөр төлөх</button>
             `;
     cartInfo.appendChild(cartInfoElement);
   });

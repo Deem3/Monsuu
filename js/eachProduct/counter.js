@@ -42,8 +42,6 @@ const checkLoaded = setInterval(()=>{
     console.log('stop')
     clearInterval(checkLoaded)
     const num = document.getElementById("num");
-    console.log(num)
-  
     const globalState = (() => {
       let counter = 1;
       

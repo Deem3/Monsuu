@@ -34,6 +34,7 @@ footer>ul{
     height: 11rem;
     border-bottom: var(--footer-color) 1px solid;
     padding: 0;
+    margin-top: 0;
 }
 footer>ul>li>a{
     color: var(--footer-color);
