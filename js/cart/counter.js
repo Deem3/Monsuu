@@ -39,12 +39,14 @@ function handleMinus(id){
     localStorage.removeItem(id);
     console.log('removed')
   }
+  document.getElementById('display_counter').innerHTML = num;
   localStorage.setItem(id, num);
 }
 
 function handlePlus(id){
   let num = localStorage.getItem(id);
   num++;
+  document.getElementById('display_counter').innerHTML = num;
   localStorage.setItem(id, num);
 }
 

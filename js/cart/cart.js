@@ -20,7 +20,7 @@ fetch("/json/products.json")
                         <button id="minus_btn" onclick="handleMinus(${
                           product._id
                         })" class="counter_btn_minus">-</button>
-                        <p>${localStorage.getItem(product._id)}</p>
+                        <p id="display_counter">${localStorage.getItem(product._id)}</p>
                         <button id="plus_btn" onclick="handlePlus(${
                           product._id
                         })" class="counter_btn_plus">+</button>
