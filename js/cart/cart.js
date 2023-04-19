@@ -1,10 +1,10 @@
 "use strict";
 const cartId = document.getElementById("first");
 
-fetch("/json/products.json")
+fetch("https://api.jsonbin.io/v3/b/643eae58c0e7653a05a6e439")
   .then((res) => res.json())
   .then((data) => {
-    data.products.map((product) => {
+    data.record.products.map((product) => {
       if (null != localStorage.getItem(product._id)) {
         const eachProduct = document.createElement("article");
         eachProduct.className = "each_product";
