@@ -79,6 +79,7 @@ class CartList extends HTMLElement {
                 outline: none;
             }
         `;
+    localStorage.setItem("quantity", 0);
   }
   #Render(product) {
     const article = document.createElement("article");
@@ -108,7 +109,15 @@ class CartList extends HTMLElement {
       const currentValue = parseInt(input.value);
       input.value = currentValue + 1;
       localStorage.setItem(product._id, input.value);
-
+      let quantity = parseInt(localStorage.getItem('quantity'))  + 1;
+            localStorage.setItem('quantity', quantity);
+      const event = new CustomEvent("cart-changed", {
+        detail: {
+          quantity: parseInt(localStorage.getItem('quantity')),
+        }
+      });
+      this.dispatchEvent(event);
+      
     });
 
     minusBtn.addEventListener("click", () => {
@@ -116,11 +125,27 @@ class CartList extends HTMLElement {
       if (currentValue > 1) {
         input.value = currentValue - 1;
         localStorage.setItem(product._id, input.value);
+        let quantity = parseInt(localStorage.getItem('quantity'))  - 1;
+        localStorage.setItem('quantity', quantity);
+        const event = new CustomEvent("cart-changed", {
+          detail: {
+            quantity: parseInt(localStorage.getItem('quantity')),
+          }
+        });
+        this.dispatchEvent(event);
       }
     });
     deleteBtn.addEventListener("click", () => {
-        article.remove();
+      let quantity = parseInt(localStorage.getItem('quantity'))  - parseInt(localStorage.getItem(product._id));
+      article.remove();
         localStorage.removeItem(product._id);
+        localStorage.setItem('quantity', quantity);
+        const event = new CustomEvent("cart-changed", {
+          detail: {
+            quantity: parseInt(localStorage.getItem('quantity')),
+          }
+        });
+        this.dispatchEvent(event);
     });
   }
   // counter functions
@@ -136,6 +161,8 @@ class CartList extends HTMLElement {
         products.forEach((product) => {
           if (localStorage.getItem(product._id) != null) {
             this.#Render(product);
+            let quantity = parseInt(localStorage.getItem('quantity'))  + parseInt(localStorage.getItem(product._id));
+            localStorage.setItem('quantity', quantity);
           }
         });
       });

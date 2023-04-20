@@ -3,9 +3,6 @@ class ProductDetails extends HTMLElement {
         super();
         this.id = localStorage.getItem('id')
         this.counter = 0;
-        this.plus_btn = this.plus_btn.bind(this);
-        this.minus_btn = this.minus_btn.bind(this);
-        this.order = this.order.bind(this);
     }
     // Render function
     #Render(products){
