@@ -1,7 +1,9 @@
 class ProductList extends HTMLElement {
     constructor() {
         super();
+        // create shadowDOM
         this.attachShadow({ mode: 'open' });
+        // this is style template
         this.articleStyle = `
         section{
             display: grid;
@@ -50,9 +52,13 @@ class ProductList extends HTMLElement {
             font-weight: 100;
             font-size: 1.5rem;
         }`
+        // creating section element and named it as section and adding it to shadowDOM
         this.section = document.createElement('section')
         this.shadowRoot.appendChild(this.section)
     }
+
+    // this is render function which parameter is product
+
     #Render(product){
         const article = document.createElement('article');
         article.innerHTML = `
@@ -63,16 +69,24 @@ class ProductList extends HTMLElement {
             <h3 onclick="handleProd(${product._id})">${product.name}</h3>
             </div>
         `
+        // add this article to section
         this.shadowRoot.querySelector('section').appendChild(article);
     }
+
+    // this function will fire this code when this component will be added to DOM
+
     connectedCallback() {
+        // creating style element and applying style template to it after that adding it to shadowDOM
         const style = document.createElement('style');
         style.innerHTML = this.articleStyle;
         this.shadowRoot.appendChild(style);
+        
+        // fetch data from api
         fetch("https://api.jsonbin.io/v3/b/643eae58c0e7653a05a6e439")
             .then(res => res.json())
             .then(data => {
                 const products =data.record.products;
+                // loop through products and render them
                 products.map(product => {
                     this.#Render(product);
                 })

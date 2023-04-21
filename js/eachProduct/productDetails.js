@@ -1,6 +1,9 @@
+// this is not using shadow dom
+
 class ProductDetails extends HTMLElement {
     constructor() {
         super();
+        // initializing id and counter
         this.id = localStorage.getItem('id')
         this.counter = 0;
     }
@@ -61,7 +64,7 @@ class ProductDetails extends HTMLElement {
         document.getElementById('order').addEventListener('click', this.order);
     }
 
-    // button functions
+    // these are button functions which are used in increment and decrement, deleting product and adding product to cart
     plus_btn = () => {
       this.counter++;
       document.getElementById('num').innerHTML = this.counter;
@@ -78,6 +81,7 @@ class ProductDetails extends HTMLElement {
       localStorage.setItem(localStorage.getItem('id'), this.counter);
     }
 
+    // this function will fire code in itself when the component is connected to the DOM
 
     connectedCallback() {
         fetch('https://api.jsonbin.io/v3/b/643eae58c0e7653a05a6e439')
