@@ -21,7 +21,7 @@ template.innerHTML = `
 <section class="nav__menu" id="section__menu">
             <img src="images/Navbar.svg" alt="menu" />
           <ul class="menu__dropdown" id="menu">
-            <li><a href="./product.html">Бүтээгдэхүүн</a></li>
+            <li><a href="product.html">Бүтээгдэхүүн</a></li>
             <li><a href="#">Бидний тухай</a></li>
             <li><a href="#">Ажлын байр</a></li>
             <li><a href="#">Хаяг байршил</a></li>
@@ -30,9 +30,9 @@ template.innerHTML = `
         </section>
 
         <ul class="for__customer">
-          <li><a href="./product.html">Бяцхан үрсдээ</a></li>
-          <li><a href="./product.html">Өрх гэрт</a></li>
-          <li><a href="./product.html">Урамшуулал</a></li>
+          <li><a href="product.html">Бяцхан үрсдээ</a></li>
+          <li><a href="product.html">Өрх гэрт</a></li>
+          <li><a href="product.html">Урамшуулал</a></li>
         </ul>
         <a href="index.html">
           <img
@@ -42,8 +42,8 @@ template.innerHTML = `
         />
         </a>
         <div class="nav__user">
-          <a href="cart.html"><img src="images/Cart.svg" alt="монсүү сагс" /></a>
-          <img src="images/Users.svg" alt="монсүү хэрэглэгч" />
+          <a href="cart.html"><img src="images/header/cart.svg" alt="монсүү сагс" /></a>
+          <img src="images/header/users.svg" alt="монсүү хэрэглэгч" />
         </div>
 `
 document.getElementById("Header").appendChild(template)
