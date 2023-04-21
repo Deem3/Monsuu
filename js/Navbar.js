@@ -36,7 +36,7 @@ template.innerHTML = `
         </ul>
         <a href="index.html">
           <img
-          src="images/Logo.png"
+          src="images/header/Logo.png"
           class="nav__logo"
           alt="монсүү monsuu"
         />
