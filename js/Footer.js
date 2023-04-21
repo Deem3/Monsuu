@@ -15,9 +15,9 @@ const content = document.createRange().createContextualFragment(`
       Улаанбаатар хот
     </h2>
     <div class="social__address">
-      <img src="images/footer/facebook.svg" alt="monsuu facebook" />
-      <img src="images/footer/instagram.svg" alt="monsuu instagram" />
-      <img src="images/footer/mail.svg" alt="monsuu email" />
+      <img src="./images/footer/facebook.svg" alt="monsuu facebook" />
+      <img src="./images/footer/instagram.svg" alt="monsuu instagram" />
+      <img src="./images/footer/mail.svg" alt="monsuu email" />
     </div>
   </address>
   <h2 class="footer__copyright">

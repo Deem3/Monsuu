@@ -19,7 +19,7 @@ const dropdown_styled = `
 const template = document.createElement('nav')
 template.innerHTML = `
 <section class="nav__menu" id="section__menu">
-            <img src="images/Navbar.svg" alt="menu" />
+            <img src="./images/Navbar.svg" alt="menu" />
           <ul class="menu__dropdown" id="menu">
             <li><a href="./product.html">Бүтээгдэхүүн</a></li>
             <li><a href="#">Бидний тухай</a></li>
@@ -36,14 +36,14 @@ template.innerHTML = `
         </ul>
         <a href="index.html">
           <img
-          src="images/Logo.png"
+          src="./images/Logo.png"
           class="nav__logo"
           alt="монсүү monsuu"
         />
         </a>
         <div class="nav__user">
-          <a href="cart.html"><img src="images/Cart.svg" alt="монсүү сагс" /></a>
-          <img src="images/Users.svg" alt="монсүү хэрэглэгч" />
+          <a href="cart.html"><img src="./images/Cart.svg" alt="монсүү сагс" /></a>
+          <img src="./images/Users.svg" alt="монсүү хэрэглэгч" />
         </div>
 `
 document.getElementById("Header").appendChild(template)
