@@ -24,27 +24,27 @@ class ProductDetails extends HTMLElement {
           </section>
           <section class="product-info">
             <article>
-              <img src="/images/condition/products.png"></img>
+              <img src="images/condition/products.png"></img>
               <h3>САВЛАГАА</h3>
               <p>${products.package} </p>
             </article>
             <article>
-              <img src="/images/condition/bottle.png"></img>
+              <img src="images/condition/bottle.png"></img>
               <h3>ХЭМЖЭЭ</h3>
               <p>${products.weight}</p>
             </article>
             <article>
-              <img src="/images/condition/calories.png"></img>
+              <img src="images/condition/calories.png"></img>
               <h3>ИЛЧЛЭГ</h3>
               <p>${products.calore} Ккал</p>
             </article>
             <article>
-              <img src="/images/condition/keep.png"></img>
+              <img src="images/condition/keep.png"></img>
               <h3>ХАДГАЛАХ ХУГАЦАА</h3>
               <p>${products.keep_day} хоног</p>
             </article>
             <article>
-              <img src="/images/condition/celsius.png"></img>
+              <img src="images/condition/celsius.png"></img>
               <h3>ХАДГАЛАХ НӨХЦӨЛ</h3>
               <p>${products.keep_cond}</p>
             </article>
