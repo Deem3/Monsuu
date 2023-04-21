@@ -1,0 +1,14 @@
+@import url('../root.css');
+
+/* main section */
+
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 15rem;
+    padding-right: 15rem;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    position: relative;
+}

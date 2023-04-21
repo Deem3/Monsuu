@@ -1,0 +1,66 @@
+@import url('../root.css');
+
+body{
+    font-family: var(--inter-font);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* navigation section */
+
+nav{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;  
+    grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
+    border-bottom: black 1px     solid;
+    height: 7.5rem;
+}
+
+.for__customer{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: var(--primary-color);
+}
+
+.for__customer>li{
+    margin: 0 1rem;
+}
+
+.nav__user{
+    grid-column-start: 5;
+}
+
+.nav__menu{
+    width: 5rem;
+    height: 3.75rem;
+    display: inline-block;
+    position: relative;
+}
+
+/* dropdown menu */
+.menu__dropdown{
+    display: none;
+    list-style: none;
+    text-align: start;
+}
+
+.nav__user>*{
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+}
+
+.nav__logo{
+    width: 5.8125rem;
+    height: 5.8125rem;
+    justify-self: center;
+}
