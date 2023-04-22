@@ -75,6 +75,9 @@ export class PopupPay extends HTMLElement {
                 font-size: 2rem;
                 cursor: pointer;
             }
+            .next_btn{
+              cursor: pointer;
+            }
         `;
   }
 
