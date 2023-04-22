@@ -42,8 +42,8 @@ template.innerHTML = `
         />
         </a>
         <div class="nav__user">
-          <a href="cart.html"><img src="images/header/cart.svg" alt="монсүү сагс" /></a>
-          <img src="images/header/users.svg" alt="монсүү хэрэглэгч" />
+          <a href="cart.html"><img src="images/header/ cart.svg" alt="монсүү сагс" /></a>
+          <img src="images/header/ users.svg" alt="монсүү хэрэглэгч" />
         </div>
 `
 document.getElementById("Header").appendChild(template)
