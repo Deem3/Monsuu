@@ -1,5 +1,6 @@
 // importing cartList component from same directory
 import {CartList} from './cartList.js'
+import { PopupPay } from './popupPay.js';
 
 {/* this is cartInfo component that will show total price and total quantity of products in cart and
 also it uses method of cartList component to get total price */}
@@ -17,6 +18,8 @@ class CartInfo extends HTMLElement {
         grid-template-columns: 1fr;
         grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 1fr;
         align-items: center;
+        padding-left: 5rem;
+        padding-right: 5rem;
       }
       section>div{
         display: flex;
@@ -78,6 +81,13 @@ class CartInfo extends HTMLElement {
             <button id="payment_btn">Төлбөр төлөх</button>
           </section>
         `;
+
+        // when payment button is clicked it will show popupPay component
+        const paymentBtn = this.shadowRoot.querySelector('#payment_btn')
+        paymentBtn.addEventListener('click',()=>{
+          const popup = new PopupPay();
+          popup.showPopup();
+        })
   }
 
 
@@ -125,8 +135,6 @@ class CartInfo extends HTMLElement {
         })
         .catch(err=>console.log(err))
       });
-
-      
   }
 
   disconnectedCallback() {
