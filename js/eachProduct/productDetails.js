@@ -68,7 +68,6 @@ class ProductDetails extends HTMLElement {
     plus_btn = () => {
       this.counter++;
       document.getElementById('num').innerHTML = this.counter;
-      console.log(this.counter)
     }
     minus_btn = () => {
       if (this.counter >= 1) {

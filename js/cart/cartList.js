@@ -88,8 +88,8 @@ export class CartList extends HTMLElement {
                 outline: none;
             }
         `;
-        // don't know why i used this so i will comment it out and remove it later if it is not needed
-    // localStorage.setItem("quantity", 0);
+        // initializing quantity to 0 in local storage
+    localStorage.setItem("quantity", 0);
   }
   #Render(product) {
     const article = document.createElement("article");
