@@ -94,6 +94,7 @@ class CartInfo extends HTMLElement {
     // when component is connected to DOM this function will be fired
 
   connectedCallback() {
+    this.#Render(localStorage.getItem("quantity"));
     
     // running through all products and checking if there is any product in local storage
 
