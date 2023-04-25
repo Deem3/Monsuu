@@ -144,13 +144,13 @@ export class PopupPay extends HTMLElement {
     
     const exitBtn = this.shadowRoot.querySelector("#exit_btn");
     if(exitBtn){
-        exitBtn.addEventListener("click", () => {
+        exitBtn.addEventListener("pointerdown", () => {
             this.remove()
         })
     }
     const nextBtn = this.shadowRoot.querySelector('#next_btn');
     if(nextBtn){
-        nextBtn.addEventListener('click', ()=>{
+        nextBtn.addEventListener('pointerdown', ()=>{
             const payment = new PaymentPopup()
             payment.showPaymentPopup();
             this.remove();

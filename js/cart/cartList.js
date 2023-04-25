@@ -115,7 +115,7 @@ export class CartList extends HTMLElement {
     const input = article.querySelector(".disp-num");
     const deleteBtn = article.querySelector(".delete-btn");
 
-    plusBtn.addEventListener("click", () => {
+    plusBtn.addEventListener("pointerdown", () => {
       const currentValue = parseInt(input.value);
       input.value = currentValue + 1;
       localStorage.setItem(product._id, input.value);
@@ -130,7 +130,7 @@ export class CartList extends HTMLElement {
       this.dispatchEvent(event);
     });
 
-    minusBtn.addEventListener("click", () => {
+    minusBtn.addEventListener("pointerdown", () => {
       const currentValue = parseInt(input.value);
       if (currentValue > 1) {
         input.value = currentValue - 1;
@@ -145,7 +145,7 @@ export class CartList extends HTMLElement {
         this.dispatchEvent(event);
       }
     });
-    deleteBtn.addEventListener("click", () => {
+    deleteBtn.addEventListener("pointerdown", () => {
       let quantity = parseInt(localStorage.getItem('quantity'))  - parseInt(localStorage.getItem(product._id));
       article.remove();
         localStorage.removeItem(product._id);

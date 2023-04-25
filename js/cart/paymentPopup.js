@@ -127,10 +127,10 @@ export class PaymentPopup extends HTMLElement {
                 </div>
             </section>
         `
-        this.shadowRoot.querySelector('#exit').addEventListener('click', () => {
+        this.shadowRoot.querySelector('#exit').addEventListener('pointerdown', () => {
             this.remove()
         })
-        this.shadowRoot.querySelector('#back').addEventListener('click', () => {
+        this.shadowRoot.querySelector('#back').addEventListener('pointerdown', () => {
             const popup = new PopupPay()
             popup.showPopup();
             this.remove()

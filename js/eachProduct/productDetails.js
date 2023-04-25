@@ -59,9 +59,9 @@ class ProductDetails extends HTMLElement {
           </section>
         </section>
         `
-        document.getElementById('plus_btn').addEventListener('click', this.plus_btn);
-        document.getElementById('minus_btn').addEventListener('click', this.minus_btn);
-        document.getElementById('order').addEventListener('click', this.order);
+        document.getElementById('plus_btn').addEventListener('pointerdown', this.plus_btn);
+        document.getElementById('minus_btn').addEventListener('pointerdown', this.minus_btn);
+        document.getElementById('order').addEventListener('pointerdown', this.order);
     }
 
     // these are button functions which are used in increment and decrement, deleting product and adding product to cart

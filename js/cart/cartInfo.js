@@ -84,7 +84,7 @@ class CartInfo extends HTMLElement {
 
         // when payment button is clicked it will show popupPay component
         const paymentBtn = this.shadowRoot.querySelector('#payment_btn')
-        paymentBtn.addEventListener('click',()=>{
+        paymentBtn.addEventListener('pointerdown',()=>{
           const popup = new PopupPay();
           popup.showPopup();
         })
