@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 const dropdown_styled = `
     display: block;
@@ -11,12 +11,9 @@ const dropdown_styled = `
     transition-duration: 600ms;
     transition: ease-in-out;
     border: 1px #272f89 solid
-`
+`;
 
-
-
-
-const template = document.createElement('nav')
+const template = document.createElement("nav");
 template.innerHTML = `
 <section class="nav__menu" id="section__menu">
             <img src="images/Navbar.svg" alt="menu" />
@@ -45,20 +42,19 @@ template.innerHTML = `
           <a href="cart.html"><img src="images/header/icons8-shopping-cart-48.png" alt="монсүү сагс" /></a>
           <a href="#"><img src="images/header/users.svg" alt="монсүү хэрэглэгч" /></a>
         </div>
-`
-document.getElementById("Header").appendChild(template)
+`;
+document.getElementById("Header").appendChild(template);
 
-const menu = document.getElementById('menu');
-const navbar = document.getElementById('section__menu');
+const menu = document.getElementById("menu");
+const navbar = document.getElementById("section__menu");
 var check = false;
 
 navbar.onclick = () => {
-    if(check != false){
-        check = false;
-        menu.style = "display: none"
-    }
-    else{
-        check = true;
-        menu.style = dropdown_styled;
-    }
-}
+  if (check != false) {
+    check = false;
+    menu.style = "display: none";
+  } else {
+    check = true;
+    menu.style = dropdown_styled;
+  }
+};

@@ -70,6 +70,9 @@ class ProductList extends HTMLElement {
             </div>
         `
         // add this article to section
+        // const handleProd = (id) => {
+        //     console.log('hello')
+        // }
         this.shadowRoot.querySelector('section').appendChild(article);
     }
 

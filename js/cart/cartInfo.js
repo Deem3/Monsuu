@@ -64,7 +64,7 @@ class CartInfo extends HTMLElement {
       <section>
             <div>
                  <p>Барааны нийт үнэ</p>
-                 <p></p>
+                 <p id="total"></p>
             </div>
             <div>
                 <p>Барааны тоо</p>
@@ -76,7 +76,7 @@ class CartInfo extends HTMLElement {
             </div>
             <div>
                 <p>Нийт төлбөр</p>
-                <p></p>
+                <p id="totalPrice"></p>
             </div>
             <button id="payment_btn">Төлбөр төлөх</button>
           </section>
@@ -116,8 +116,8 @@ class CartInfo extends HTMLElement {
     const listComp = new CartList();
     listComp.addPrice()
     .then((total)=>{
-        this.shadowRoot.querySelector('div:nth-child(1) p:nth-child(2)').innerHTML = total + '₮';
-        this.shadowRoot.querySelector('div:nth-child(4) p:nth-child(2)').innerHTML = total + 5000 + '₮';
+      this.shadowRoot.getElementById("total").innerHTML = total + '₮';
+      this.shadowRoot.getElementById("totalPrice").innerHTML = total + total==0 ? 0 : 5000 + '₮';
     })
     .catch(err=>console.log(err))
 
@@ -132,7 +132,8 @@ class CartInfo extends HTMLElement {
         // same as above but when user adds or removes product from cart it will update total price
         listComp.addPrice()
         .then((total)=>{
-            this.shadowRoot.querySelector('div:nth-child(1) p:nth-child(2)').innerHTML = total + '₮';
+            this.shadowRoot.getElementById('total').innerHTML = total + '₮';
+            this.shadowRoot.getElementById('totalPrice').innerHTML = total + total==0 ? 0 : 5000 + '₮';
         })
         .catch(err=>console.log(err))
       });
