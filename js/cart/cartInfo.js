@@ -84,6 +84,7 @@ class CartInfo extends HTMLElement {
 
         // when payment button is clicked it will show popupPay component
         const paymentBtn = this.shadowRoot.querySelector('#payment_btn')
+
         paymentBtn.addEventListener('pointerdown',()=>{
           const popup = new PopupPay();
           popup.showPopup();
@@ -94,6 +95,8 @@ class CartInfo extends HTMLElement {
     // when component is connected to DOM this function will be fired
 
   connectedCallback() {
+
+
     this.#Render(localStorage.getItem("quantity"));
     
     // running through all products and checking if there is any product in local storage
@@ -104,36 +107,36 @@ class CartInfo extends HTMLElement {
         const products = data.record.products;
         products.forEach((product) => {
           if (localStorage.getItem(product._id) != null) {
-            this.price =
-              this.price +
-              parseInt(localStorage.getItem(product._id)) * product.price;
+            this.price = this.price + parseInt(localStorage.getItem(product._id)) * product.price;
             this.#Render(localStorage.getItem("quantity"));
           }
         });
       });
 
     //   importing cartList component and using its functions this is initialising total price and price
+
     const listComp = new CartList();
+
     listComp.addPrice()
     .then((total)=>{
       this.shadowRoot.getElementById("total").innerHTML = total + '₮';
-      this.shadowRoot.getElementById("totalPrice").innerHTML = total + total==0 ? 0 : 5000 + '₮';
+      this.shadowRoot.getElementById("totalPrice").innerHTML = total==0 ? 0 :total + 5000 + '₮';
     })
     .catch(err=>console.log(err))
 
 
     // this is event listener for cart-changed event which is fired when user adds or removes product from cart
-    document
-      .querySelector("cart-list")
-      .addEventListener("cart-changed", (e) => {
+    document.querySelector("cart-list").addEventListener("cart-changed", (e) => {
         // if there is an event then it will render the component again
         this.#Render(localStorage.getItem("quantity"));
         
         // same as above but when user adds or removes product from cart it will update total price
+
         listComp.addPrice()
+
         .then((total)=>{
             this.shadowRoot.getElementById('total').innerHTML = total + '₮';
-            this.shadowRoot.getElementById('totalPrice').innerHTML = total + total==0 ? 0 : 5000 + '₮';
+            this.shadowRoot.getElementById('totalPrice').innerHTML = total==0 ? 0 : total + 5000 + '₮';
         })
         .catch(err=>console.log(err))
       });

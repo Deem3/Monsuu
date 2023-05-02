@@ -24,6 +24,12 @@
         height: 43px;
         margin-left: 10px;
     }
+    .menu__dropdown {
+        display: none;
+        list-style: none;
+        text-align: start;
+      }
+    
     .nav__menu>img{
         width: 56px;
         height: 43px;
@@ -35,5 +41,8 @@
     .nav__user>a>img{
         width: 48px;
         height: 48px;
+    }
+    .login{
+        display: none;
     }
 }

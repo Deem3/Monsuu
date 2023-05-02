@@ -4,9 +4,34 @@ class ProductList extends HTMLElement {
         // create shadowDOM
         this.attachShadow({ mode: 'open' });
         // this is style template
+        
         this.articleStyle = `
+@media only screen and (max-width: 600px) {
+    section{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    .product-img{
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+    .product-info{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+@media only screen and (min-width: 1280px) {
+
         section{
             display: grid;
+            width: 100%;
             grid-template-columns: repeat(3, 1fr);
             justify-items: center;
             justify-content: center;
@@ -51,7 +76,7 @@ class ProductList extends HTMLElement {
         .product-info>h3{
             font-weight: 100;
             font-size: 1.5rem;
-        }`
+        }}`
         // creating section element and named it as section and adding it to shadowDOM
         this.section = document.createElement('section')
         this.shadowRoot.appendChild(this.section)

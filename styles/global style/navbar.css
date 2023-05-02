@@ -58,8 +58,13 @@
   }
 
   .nav__user > * {
+    position: relative;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
+  }
+
+  .login{
+    display: none;
   }
 
   .nav__logo {
