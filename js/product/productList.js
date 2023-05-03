@@ -109,11 +109,20 @@ class ProductList extends HTMLElement {
         style.innerHTML = this.articleStyle;
         this.shadowRoot.appendChild(style);
         
+        fetch('https://api.jsonbin.io/v3/b/643eae58c0e7653a05a6e439')
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data.record.products[0])
+            })
         // fetch data from api
-        fetch("https://api.jsonbin.io/v3/b/643eae58c0e7653a05a6e439")
+        fetch("http://localhost:4000/api/")
             .then(res => res.json())
             .then(data => {
-                const products =data.record.products;
+                console.log(data[0])
+                data.map(test=>{
+                    console.log(test)
+                })
+                const products = data;
                 // loop through products and render them
                 products.map(product => {
                     this.#Render(product);
