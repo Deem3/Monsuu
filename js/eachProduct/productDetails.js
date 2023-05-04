@@ -83,10 +83,10 @@ class ProductDetails extends HTMLElement {
     // this function will fire code in itself when the component is connected to the DOM
 
     connectedCallback() {
-        fetch('https://api.jsonbin.io/v3/b/643eae58c0e7653a05a6e439')
+        fetch('http://localhost:4000/api/')
             .then(res => res.json())
             .then(data => {
-                const products = data.record.products[this.id-1];
+                const products = data[this.id];
                 this.#Render(products);
             })
     }

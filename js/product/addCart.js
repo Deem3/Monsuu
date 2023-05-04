@@ -4,7 +4,6 @@ var count = 0;
 
 const handleAdd = (id) => {
     count++
-
     localStorage.setItem(id, count);
 }
 
