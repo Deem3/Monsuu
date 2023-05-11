@@ -42,7 +42,7 @@ template.innerHTML = `
             <li><a href="product.html">Бүтээгдэхүүн</a></li>
             <li><a href="#">Бидний тухай</a></li>
             <li><a href="#">Ажлын байр</a></li>
-            <li><a href="#">Хаяг байршил</a></li>
+            <li><a href="address.html">Хаяг байршил</a></li>
             <li><a href="#">Тусламж</a></li>
           </ul>
         </section>
