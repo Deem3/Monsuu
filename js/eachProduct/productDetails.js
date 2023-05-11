@@ -36,22 +36,22 @@ class ProductDetails extends HTMLElement {
             <article>
               <img src="images/condition/calories.png"></img>
               <h3>ИЛЧЛЭГ</h3>
-              <p>${products.calore} Ккал</p>
+              <p>${products.calorie} Ккал</p>
             </article>
             <article>
               <img src="images/condition/keep.png"></img>
               <h3>ХАДГАЛАХ ХУГАЦАА</h3>
-              <p>${products.keep_day} хоног</p>
+              <p>${products.keep_date} хоног</p>
             </article>
             <article>
               <img src="images/condition/celsius.png"></img>
               <h3>ХАДГАЛАХ НӨХЦӨЛ</h3>
-              <p>${products.keep_cond}</p>
+              <p>${products.keep_condition}</p>
             </article>
           </section>
           <section class="product-description">
             <h2>БҮТЭЭГДЭХҮҮНИЙ ОНЦЛОГ:</h2>
-            <p>${products.prod_adventage}</p>
+            <p>${products.product_advantage}</p>
           </section>
           <section class="product-upside">
             <h2>ДАВУУ ТАЛУУД:</h2>
@@ -86,7 +86,8 @@ class ProductDetails extends HTMLElement {
         fetch('http://localhost:4000/api/')
             .then(res => res.json())
             .then(data => {
-                const products = data[this.id];
+              console.log(data)
+                const products = data[this.id-1];
                 this.#Render(products);
             })
     }

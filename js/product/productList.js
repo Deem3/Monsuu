@@ -36,7 +36,6 @@ class ProductList extends HTMLElement {
             justify-items: center;
             justify-content: center;
             align-items: center;
-            height: 80rem;
         }
         article{
             display: flex;
@@ -46,16 +45,15 @@ class ProductList extends HTMLElement {
         }
         
         .product-img{
-            width: 12rem;
-            height: 12rem;;
+            width: 40%
         }
         
         .product-cart{
             position: absolute;
-            bottom: 25%;
-            right: 0;
-            width: 3.125rem;
-            height: 3.125rem;
+            bottom: 20%;
+            right: 25%;
+            width: 10%;
+            height: 20%;
         }
         
         .product-info{
@@ -66,7 +64,7 @@ class ProductList extends HTMLElement {
             justify-items: center;
             border-top: 1px solid gray;
             margin-top: 1.25rem;
-            width: 25rem;
+            width: 50%;
         }
         
         .product-info>p{
@@ -87,7 +85,7 @@ class ProductList extends HTMLElement {
     #Render(product){
         const article = document.createElement('article');
         article.innerHTML = `
-        <img src="${product.img}" alt="${product.name}" class="product-img">
+        <img src="${product.img}" alt="${product.name}" onclick="handleProd(${product._id})" class="product-img" >
             <img src="images/product/shopping_cart.svg" class="product-cart" onclick="handleAdd(${product._id})">
             <div class="product-info">
             <p>${product.weight} гр</p>
