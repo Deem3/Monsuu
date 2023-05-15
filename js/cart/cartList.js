@@ -166,10 +166,9 @@ export class CartList extends HTMLElement {
 
     return new Promise((resolve, reject) => {
       let total = 0;
-      fetch("https://api.jsonbin.io/v3/b/643eae58c0e7653a05a6e439")
+      fetch("http://localhost:4000/api/")
         .then((res) => res.json())
-        .then((data) => {
-          const products = data.record.products;
+        .then((products) => {
           products.forEach((product) => {
             // calculating the total price by multiplying the price of the product with the quantity of the product
             if (localStorage.getItem(product._id) != null) {
@@ -197,11 +196,10 @@ export class CartList extends HTMLElement {
     this.shadowRoot.appendChild(style);
 
     // fetching data from jsonbin and rendering it
-    fetch("https://api.jsonbin.io/v3/b/643eae58c0e7653a05a6e439")
+    fetch("http://localhost:4000/api/")
       .then((res) => res.json())
-      .then((data) => {
+      .then((products) => {
         // getting the products from the jsonbin
-        const products = data.record.products;
         // looping through the products
         products.forEach((product) => {
 

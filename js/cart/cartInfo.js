@@ -101,10 +101,9 @@ class CartInfo extends HTMLElement {
     
     // running through all products and checking if there is any product in local storage
 
-    fetch("https://api.jsonbin.io/v3/b/643eae58c0e7653a05a6e439")
+    fetch("http://localhost:4000/api/")
       .then((res) => res.json())
-      .then((data) => {
-        const products = data.record.products;
+      .then((products) => {
         products.forEach((product) => {
           if (localStorage.getItem(product._id) != null) {
             this.price = this.price + parseInt(localStorage.getItem(product._id)) * product.price;
@@ -118,9 +117,9 @@ class CartInfo extends HTMLElement {
     const listComp = new CartList();
 
     listComp.addPrice()
-    .then((total)=>{
-      this.shadowRoot.getElementById("total").innerHTML = total + '₮';
-      this.shadowRoot.getElementById("totalPrice").innerHTML = total==0 ? 0 :total + 5000 + '₮';
+      .then((total)=>{
+        this.shadowRoot.getElementById("total").innerHTML = total + '₮';
+        this.shadowRoot.getElementById("totalPrice").innerHTML = total==0 ? 0 :total + 5000 + '₮';
     })
     .catch(err=>console.log(err))
 

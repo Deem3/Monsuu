@@ -4,7 +4,8 @@ const login_text = `
   <form class="login">
     <input id="login_user" type="text" placeholder="Нэвтрэх нэр" />
     <input id="login_pass" type="password" placeholder="Нууц үг" />
-    <button type="button">Нэвтрэх</button>
+    <button id="login_btn" >Нэвтрэх</button>
+    <button id="logout_btn" >Гарах</button>
   </form>
 `;
 
@@ -40,7 +41,7 @@ template.innerHTML = `
             <img src="images/Navbar.svg" alt="menu" />
           <ul class="menu__dropdown" id="menu">
             <li><a href="product.html">Бүтээгдэхүүн</a></li>
-            <li><a href="#">Бидний тухай</a></li>
+            <li><a href="createProduct.html">Бидний тухай</a></li>
             <li><a href="#">Ажлын байр</a></li>
             <li><a href="address.html">Хаяг байршил</a></li>
             <li><a href="#">Тусламж</a></li>
@@ -108,4 +109,38 @@ user.addEventListener("pointerdown", ()=>{
   }
 })
 
+const login_btn = document.getElementById("login_btn");
 
+
+
+
+login_btn.addEventListener('pointerdown', (e)=>{
+  e.preventDefault()
+  const login_user = document.getElementById("login_user").value;
+  const login_pass = document.getElementById("login_pass").value;
+  const date = new Date()
+  date.setTime(date.getTime() + (1200000));
+  fetch('http://localhost:4000/user/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({username: login_user, password: login_pass})
+    })
+      .then(res=>res.json())
+      .then(data=>{
+        // console.log('signed in successfuly')
+        document.cookie = `token=${data.token}; expires=${date.toUTCString()}`
+      })
+      .catch(err=>console.log(err))
+  })
+
+const logout_btn = document.getElementById("logout_btn");
+
+logout_btn.addEventListener('pointerdown', (e)=>{
+  e.preventDefault()
+  const date = new Date()
+  date.setTime(date.getTime() - (0));
+  document.cookie = `token=; expires=${date.toUTCString()}`
+  console.log('logged out')
+})

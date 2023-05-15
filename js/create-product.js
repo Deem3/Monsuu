@@ -72,13 +72,14 @@ class CreateProduct extends HTMLElement {
 
             const data = {_id, name, weight, img, price, pkg, calorie, keep_date, keep_condition, product_advantage, pros};
 
-            console.log(data)
+            const token = document.cookie.split('=')[1]
 
             const result = await fetch('http://localhost:4000/api/', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers:{
-                    "content-type": "application/json"
+                    'Content-Type': 'application/json',
+                    'Authorization': token
                 }
             })
             if(result.ok)
