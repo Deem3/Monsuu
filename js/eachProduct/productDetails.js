@@ -4,8 +4,11 @@ class ProductDetails extends HTMLElement {
     constructor() {
         super();
         // initializing id and counter
-        this.id = localStorage.getItem('id')
         this.counter = 0;
+        this.urlSearch = new URLSearchParams(window.location.search);
+        this.id = !this.urlSearch.get('id') ? localStorage.getItem('id') : this.urlSearch.get('id');
+        this.urlSearch.set('id', this.id)
+        window.history.replaceState({}, '', `${location.pathname}?${this.urlSearch}`)
     }
     // Render function
     #Render(products){
@@ -86,10 +89,10 @@ class ProductDetails extends HTMLElement {
         fetch(`http://localhost:4000/api/${this.id}`)
             .then(res => res.json())
             .then(data => {
-              console.log(data)
                 const products = data[0];
                 this.#Render(products);
             })
+            console.log(location.pathname)
     }
 
     disconnectedCallback() {

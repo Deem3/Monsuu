@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- link to css -->
-    <link rel="stylesheet" href="address.css"/>
-    <link rel="stylesheet" href="./styles/global style/navbar.css">
-    <link rel="stylesheet" href="./styles/global style/footer.css">
+    <link rel="stylesheet" href="styles/address/address.css"/>
+    <link rel="stylesheet" href="styles/global style/navbar.css">
+    <link rel="stylesheet" href="styles/global style/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- link to js -->
    
-    <script src="/js/Navbar.js" defer></script>
-    <script src="/js/Footer.js" defer></script>
+    <script src="js/Navbar.js" type="module"></script>
+    <script src="js/Footer.js" type="module"></script>
     <title>Хаяг байршил</title>
   </head>
   
@@ -21,7 +21,7 @@
     <!-- header Section -->
     <header id="Header">
       <!-- navigation bar -->
-          
+          <nav-bar></nav-bar>
   </header>
 
     <!-- main -->
@@ -40,7 +40,7 @@
         </article>
         <article>
             <img src="images/rectangle_40 (1).png" alt="altargana">
-            <div>
+            <div class="grid__container">
               <i class="material-icons">map </i>
               <p> Хан-Уул дүүрэг 3-р хороо”Алтаргана”хотхон 1 давхар (Мишээл экспо замын хойно) </p>
               <i class="material-icons">phone </i>  
@@ -49,12 +49,12 @@
         </article>
         <article>
             <img src="images/rectangle_40 (2).png" alt="baynzurh">
-            <div>
+            <div class="grid__container">
               <i class="material-icons">map </i>
               <p> Баянзүрх дүүрэг Кино үйлдвэр автобусны буудалын урд талд Номин супер маркеттай байрны хажууд</p>
               <i class="material-icons">phone </i>  
               <p> 70184455</p>
-            </div>
+            </div class="grid__container">
         </article>
         <article>
             <img src="images/rectangle_40 (3).png" alt="songino">
@@ -63,11 +63,11 @@
               <p> Сонгино хайрхан дүүрэг 1р хороолол 19р байрны 11р орц (Хархорин захын чанх ард)</p>
               <i class="material-icons">phone </i>  
               <p> 70184455</p>
-            </div>
+            </div class="grid__container">
         </article>
         <article>
             <img src="images/rectangle_40 (4).png" alt="chingeltei">
-            <div>
+            <div class="grid__container">
               <i class="material-icons">map </i>
               <p> Чингэлтэй дүүрэг Баянбүрдийн тойрог(50р сургуулийн баруун талд)</p>
               <i class="material-icons">phone </i>  
@@ -76,7 +76,7 @@
         </article>
         <article>
             <img src="images/rectangle_40 (5).png" alt="bayngol">
-            <div>
+            <div class="grid__container">
               <i class="material-icons">map </i>
               <p> Чингэлтэй дүүрэг Баянбүрдийн тойрог(50р сургуулийн баруун талд)</p>
               <i class="material-icons">phone </i>  

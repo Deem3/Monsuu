@@ -1,5 +1,6 @@
 'use strict'
 
+
 var count = 0;
 
 const handleAdd = (id) => {
@@ -16,5 +17,7 @@ const handleProd = (id) => {
     else{
         localStorage.setItem('id', id)
     }
+
         window.location.href = 'eachProduct.html'
 }
+

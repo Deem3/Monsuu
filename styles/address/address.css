@@ -36,19 +36,19 @@
     height: 300px;
     padding-top: 10%;
 }
-div{
+.grid__container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 0.3fr 0.3fr ;
     width:40%;    
 }
-div>p{
+.grid__container>p{
 	width:23rem;
    height: 33px;
 	letter-spacing:0;   
 }
 
-div>i{
+.grid__container>i{
     width: 45px;
     height: 45px;
     margin-top: 40%; 
