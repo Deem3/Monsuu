@@ -86,7 +86,7 @@ class ProductList extends HTMLElement {
         const article = document.createElement('article');
         article.innerHTML = `
         <img src="${product.img}" alt="${product.name}" onclick="handleProd(${product._id})" class="product-img" >
-            <img src="images/product/shopping_cart.svg" class="product-cart" onclick="handleAdd(${product._id})">
+            <img src="images/product/shopping_cart.svg" alt="cart-button" onclick="handleAdd(${product._id})" class="product-cart">
             <div class="product-info">
             <p>${product.weight} гр</p>
             <h3 onclick="handleProd(${product._id})">${product.name}</h3>

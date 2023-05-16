@@ -179,28 +179,28 @@ class Navbar extends HTMLElement {
       <section class="nav__menu" id="section__menu">
         <img src="images/Navbar.svg" alt="menu" />
         <ul class="menu__dropdown" id="menu">
-          <li><a href="product.html">Бүтээгдэхүүн</a></li>
-          <li><a href="createProduct.html">Бидний тухай</a></li>
-          <li><a href="#">Ажлын байр</a></li>
-          <li><a href="address.html">Хаяг байршил</a></li>
-          <li><a href="#">Тусламж</a></li>
+          <li><a aria-label="Menu sections product" href="/client/product.html">Бүтээгдэхүүн</a></li>
+          <li><a aria-label="Menu sections about us" href="/client/createProduct.html">Бидний тухай</a></li>
+          <li><a aria-label="Menu sections work" href="#">Ажлын байр</a></li>
+          <li><a aria-label="Menu sections address" href="/client/address.html">Хаяг байршил</a></li>
+          <li><a aria-label="Menu sections support" href="#">Тусламж</a></li>
         </ul>
       </section>
 
       <ul class="for__customer">
-        <li><a href="product.html">Бяцхан үрсдээ</a></li>
-        <li><a href="product.html">Өрх гэрт</a></li>
-        <li><a href="product.html">Урамшуулал</a></li>
+        <li><a aria-label="navbar sorting for kids" href="product.html">Бяцхан үрсдээ</a></li>
+        <li><a aria-label="navbar sorting for family" href="product.html">Өрх гэрт</a></li>
+        <li><a aria-label="navbar sorting add" href="product.html">Урамшуулал</a></li>
       </ul>
-      <a href="index.html">
+      <a href="index.html" aria-label="main logo of monsuu">
         <img
-        src="images/header/Logo.png"
+        src="images/header/Logo.webp"
         class="nav__logo"
         alt="монсүү monsuu"
       </a>
       <div class="nav__user">
-        <a href="cart.html"><img src="images/header/icons8-shopping-cart-48.png" alt="монсүү сагс" /></a>
-        <a href="#"><img id="user_login" src="images/header/users.svg" alt="монсүү хэрэглэгч" /></a>
+        <a href="cart.html" aria-label="cart button" ><img src="images/header/icons8-shopping-cart-48.webp" alt="монсүү сагс" /></a>
+        <a href="#" aria-label="auth section"><img id="user_login" src="images/header/users.svg" alt="монсүү хэрэглэгч" /></a>
         ${this.login_text}
       </div>
     </nav>
