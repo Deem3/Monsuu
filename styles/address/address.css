@@ -9,19 +9,19 @@
 }
 .hayg__text{
     width:30rem;
-	height:5.5rem;
+    height:5.5rem;
     text-decoration: none;
     color: var(--primary-color);  
     font-size:64px;
     text-align: center;
     background-color:rgba(253, 253, 253, 0.5);
-	position:absolute;
-	left:35%;
-	top:35%;
-	border-top-left-radius:0.5rem;
-	border-top-right-radius:0.5rem;
-	border-bottom-left-radius:0.5rem;
-	border-bottom-right-radius:0.5rem;
+    position:absolute;
+    left:35%;
+    top:35%;
+    border-top-left-radius:0.5rem;
+    border-top-right-radius:0.5rem;
+    border-bottom-left-radius:0.5rem;
+    border-bottom-right-radius:0.5rem;
 }
 .main__branch{
     display: grid;
