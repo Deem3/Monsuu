@@ -179,10 +179,10 @@ class Navbar extends HTMLElement {
       <section class="nav__menu" id="section__menu">
         <img src="images/Navbar.svg" alt="menu" />
         <ul class="menu__dropdown" id="menu">
-          <li><a aria-label="Menu sections product" href="/client/product.html">Бүтээгдэхүүн</a></li>
-          <li><a aria-label="Menu sections about us" href="/client/createProduct.html">Бидний тухай</a></li>
+          <li><a aria-label="Menu sections product" href="product.html">Бүтээгдэхүүн</a></li>
+          <li><a aria-label="Menu sections about us" href="createProduct.html">Бидний тухай</a></li>
           <li><a aria-label="Menu sections work" href="#">Ажлын байр</a></li>
-          <li><a aria-label="Menu sections address" href="/client/address.html">Хаяг байршил</a></li>
+          <li><a aria-label="Menu sections address" href="address.html">Хаяг байршил</a></li>
           <li><a aria-label="Menu sections support" href="#">Тусламж</a></li>
         </ul>
       </section>
