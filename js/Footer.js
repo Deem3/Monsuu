@@ -2,8 +2,8 @@
 
 const footer = document.getElementById('Footer');
 const content = document.createRange().createContextualFragment(`
-  <ul class="about_us">
-    <li><a href="#">Бидний тухай</a></li>
+  <ul>
+    <li><a href="">Бидний тухай</a></li>
     <li><a href="">Ажлын байр</a></li>
     <li class="brand__name"><a href="">Monsuu</a></li>
     <li><a href="">Хаяг байршил</a></li>
@@ -15,9 +15,9 @@ const content = document.createRange().createContextualFragment(`
       Улаанбаатар хот
     </h2>
     <div class="social__address">
-      <img src="images/footer/facebook.svg" alt="monsuu facebook" />
-      <img src="images/footer/instagram.svg" alt="monsuu instagram" />
-      <img src="images/footer/mail.svg" alt="monsuu email" />
+      <img src="/images/footer/facebook.svg" alt="monsuu facebook" />
+      <img src="/images/footer/instagram.svg" alt="monsuu instagram" />
+      <img src="/images/footer/mail.svg" alt="monsuu email" />
     </div>
   </address>
   <h2 class="footer__copyright">
