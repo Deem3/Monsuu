@@ -27,29 +27,29 @@ class ProductDetails extends HTMLElement {
           </section>
           <section class="product-info">
             <article>
-              <img src="images/condition/products.png"></img>
-              <h3>САВЛАГАА</h3>
-              <p>${products.package} </p>
+              <img src="images/condition/products.webp"></img>
+              <p>САВЛАГАА</p>
+              <h3>${products.package} </h3>
             </article>
             <article>
-              <img src="images/condition/bottle.png"></img>
-              <h3>ХЭМЖЭЭ</h3>
-              <p>${products.weight}</p>
+              <img src="images/condition/bottle.webp"></img>
+              <p>ХЭМЖЭЭ</p>
+              <h3>${products.weight}</h3>
             </article>
             <article>
-              <img src="images/condition/calories.png"></img>
-              <h3>ИЛЧЛЭГ</h3>
-              <p>${products.calorie} Ккал</p>
+              <img src="images/condition/calories.webp"></img>
+              <p>ИЛЧЛЭГ</p>
+              <h3>${products.calorie} Ккал</h3>
             </article>
             <article>
-              <img src="images/condition/keep.png"></img>
-              <h3>ХАДГАЛАХ ХУГАЦАА</h3>
-              <p>${products.keep_date} хоног</p>
+              <img src="images/condition/keep.webp"></img>
+              <p>ХАДГАЛАХ ХУГАЦАА</p>
+              <h3>${products.keep_date} хоног</h3>
             </article>
             <article>
-              <img src="images/condition/celsius.png"></img>
-              <h3>ХАДГАЛАХ НӨХЦӨЛ</h3>
-              <p>${products.keep_condition}</p>
+              <img src="images/condition/celsius.webp"></img>
+              <p>ХАДГАЛАХ НӨХЦӨЛ</p>
+              <h3>${products.keep_condition}</h3>
             </article>
           </section>
           <section class="product-description">
