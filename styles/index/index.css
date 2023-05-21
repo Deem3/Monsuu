@@ -100,7 +100,7 @@ main {
   justify-content: space-evenly;
   text-align: center;
   width: 28%;
-  height: 25%;
+  height: 20rem;
   background-color: var(--cart-color);
   padding: 1.8%;
   border-radius: 3%;
@@ -139,4 +139,7 @@ main {
 		opacity: 1;
 		transform: translateX(0);
 	}
+  height: 14rem;
+  padding-top: 0px;
+  margin-top:0px;
 }
