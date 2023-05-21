@@ -3,7 +3,7 @@
 const footer = document.getElementById('Footer');
 const content = document.createRange().createContextualFragment(`
   <ul class="about_us">
-    <li><a href="">Бидний тухай</a></li>
+    <li><a href="#">Бидний тухай</a></li>
     <li><a href="">Ажлын байр</a></li>
     <li class="brand__name"><a href="">Monsuu</a></li>
     <li><a href="">Хаяг байршил</a></li>

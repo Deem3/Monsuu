@@ -37,8 +37,8 @@ export class PopupPay extends HTMLElement {
             form>div{
                 position: relative;
             }
-            form>div>input,form>div>select , form>.next_btn{
-                width: 22rem;
+            form>div>input,form>div>select{
+                width: 24rem;
                 height: 3.5rem;
                 padding: 0;
                 border: 1px solid black;
@@ -50,33 +50,58 @@ export class PopupPay extends HTMLElement {
                 padding: 10px;
                 font-size: 1em;
                 font-family: var(--inter-font);
-
             }
-            form>div>span{
+            .apartment{
                 position: absolute;
                 left: 0.675rem;
-                top: 18px;
+                top: 28px;
                 pointer-events: none;
-                font-size: 1em;
-                transition: all 0.2s ease-in-out;
             }
-            form>div>input:valid~span, form>div>input:focus~span{
+            form>div>input:valid~.apartment, form>div>input:focus~.apartment{
                 transform: translateY(-1.5rem);
-                color: green;
-                font-size: 0.8em;
+                font-size: 0.6em;
+                color: #7E7E7E;
             }
+
+            .phone{
+              position: absolute;
+              left: 0.675rem;
+              top: 28px;
+              pointer-events: none;
+            }
+            form>div>input:valid~.phone, form>div>input:focus~.phone{
+              transform: translateY(-1.5rem);
+              font-size: 0.6em;
+              color: #7E7E7E;
+          }
+
 
             .exit_btn{
                 position: absolute;
-                top: 2rem;
+                top: 1rem;
                 right: 2rem;
                 border: none;
                 background-color: transparent;
                 font-size: 2rem;
                 cursor: pointer;
+                width: fit-content;
             }
             .next_btn{
               cursor: pointer;
+              background-color: var(--primary-color);
+              color: white;
+              font-size: 1.2rem;
+              width: 20rem;
+              height: 3.5rem;
+              padding: 0;
+              border: 1px solid black;
+              border-radius: 12px;
+            }
+
+            .district, .khoroo{
+              background-color: white;
+              cursor: pointer;
+              color: #7E7E7E
             }
         `;
   }
@@ -93,7 +118,7 @@ export class PopupPay extends HTMLElement {
 
                     </div>
                     <div>
-                        <select name="district" id="district">
+                        <select name="district" id="district" class="district">
                         <option value="Багануур">Багануур дүүрэг</option>
                         <option value="Багахангай">Багахангай дүүрэг</option>
                         <option value="Баянгол">Баянгол дүүрэг</option>
@@ -106,7 +131,7 @@ export class PopupPay extends HTMLElement {
                         </select>
                     </div>
                     <div>
-                        <select name="khoroo" id="khoroo">
+                        <select name="khoroo" id="khoroo" class="khoroo">
                         <option value="1">1-р хороо</option>
                         <option value="2">2-р хороо</option>
                         <option value="3">3-р хороо</option>
@@ -120,11 +145,12 @@ export class PopupPay extends HTMLElement {
                         </select>
                     </div>
                     <div>
-                        <input></input>
-                        <span>Байр, тоот</span>
+                        <input type="text" placeholder="Гараар оруулна уу"></input>
+                        <span class="apartment">Байр, тоот</span>
                     </div>
                     <div>
-                        <input placeholder="Газраар оруулна уу"></input>
+                        <input type="number" placeholder="Гараар оруулна уу"></input>
+                        <span class="phone">Утасны дугаар</span>
                     </div>
                     <button id="next_btn" class="next_btn" type="button">Захиалах</button>
                     <button id="exit_btn" class="exit_btn" type="button">X</button>
