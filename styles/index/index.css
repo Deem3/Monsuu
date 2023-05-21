@@ -74,7 +74,8 @@ main {
 
    .main__second__section h2 {
     font-family: var(--pacifico-font);  
-    font-size: 200%;
+    font-size: 300%;
+    font-weight: lighter;
     margin-left: 8%;
     }
 
