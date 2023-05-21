@@ -4,32 +4,58 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Монсүү сүүн бүтээгдэхүүн худалдаа">
 
-    <!-- favico -->
-    <link rel="shortcut icon" href="/images/favico/favicon.ico" type="image/x-icon">
+    <!-- Fonts -->
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- link to css -->
     <link
       rel="stylesheet"
       type="text/css"
-      href="styles/product/product.css"
+      href="./styles/product/product.css"
     />
-    <link rel="stylesheet" href="styles/global style/navbar.css" defer>
-    <link rel="stylesheet" href="styles/global style/footer.css" defer>
+    <link rel="stylesheet" href="./styles/global style/navbar.css">
+    <link rel="stylesheet" href="./styles/global style/footer.css">
 
-            <!-- mobile style -->
-            <link rel="stylesheet" href="styles/global style/navbar.mobile.css" defer>
-            <link rel="stylesheet" href="styles/global style/footer.mobile..css" defer>
-        
 
     <!-- link to js -->
     <!-- <script defer src="/js/productItem.js"></script> -->
-    <script src="js/product/productList.js"></script>
-    <script src="js/Navbar.js" defer></script>
-    <script src="js/Footer.js" defer></script>
-    <script src="js/product//addCart.js" defer></script>
+    <script src="/js/product/products.js" defer></script>
+    <script src="/js/Navbar.js" defer></script>
+    <script src="/js/Footer.js" defer></script>
+    <script src="/js/eachProduct/eachProduct.js"></script>
+    <script src="/js/product//addCart.js" defer></script>
 
     <title>Бүтээгдэхүүн</title>
   </head>
@@ -37,15 +63,15 @@
     <!-- header Section -->
     <header id="Header">
       <!-- navigation bar -->
-      <nav-bar></nav-bar>
+          
   </header>
 
     <!-- main -->
     <main>
-      <img src="images/product/rectangle_38.webp" alt="big product picture" />
+      <img src="./images/product/rectangle_38.png" alt="" />
       <h2 class="main__text">БҮТЭЭГДЭХҮҮН</h2>
       <section class="main__container" id="container">
-        <product-list></product-list>
+        <!-- <product-item>hi</product-item> -->
       </section>
     </main>
 
