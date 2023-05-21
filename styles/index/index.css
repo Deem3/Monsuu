@@ -110,5 +110,33 @@ main {
 #slider img {
   width: 90%;
   height: 100%;
+}
+.text_2 {
+  animation: text_2 1s ease-in-out forwards;
+}
 
+@keyframes text_2 {
+  0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.huuhed {
+  animation: huuhed 1s ease-in-out forwards;
+}
+
+@keyframes huuhed {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
