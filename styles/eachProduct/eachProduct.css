@@ -10,7 +10,6 @@ a{
     text-decoration: none;
     color: var(--primary-color);
 }
-
 /* main section */
 .main{
     display: grid;
@@ -70,7 +69,7 @@ a{
     height: 100%;
     background-color: white;
     font-size: 2.5rem;
-    padding :0;
+    padding: 0;
     cursor: pointer;
 }
 

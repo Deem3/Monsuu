@@ -1,11 +1,11 @@
 'use strict'
-
-
 var count = 0;
 
 const handleAdd = (id) => {
     count++
+
     localStorage.setItem(id, count);
+    // console.log(id)
 }
 
 const handleProd = (id) => {
@@ -17,7 +17,7 @@ const handleProd = (id) => {
     else{
         localStorage.setItem('id', id)
     }
-
+    // setTimeout(()=>{
         window.location.href = 'eachProduct.html'
+    // }, 500)
 }
-
