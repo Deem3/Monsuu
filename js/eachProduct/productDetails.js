@@ -29,27 +29,27 @@ class ProductDetails extends HTMLElement {
             <article>
               <img src="images/condition/products.webp"></img>
               <p>САВЛАГАА</p>
-              <h3>${products.package} </h3>
+              <h2>${products.package} </h2>
             </article>
             <article>
               <img src="images/condition/bottle.webp"></img>
               <p>ХЭМЖЭЭ</p>
-              <h3>${products.weight}</h3>
+              <h2>${products.weight}</h3>
             </article>
             <article>
               <img src="images/condition/calories.webp"></img>
               <p>ИЛЧЛЭГ</p>
-              <h3>${products.calorie} Ккал</h3>
+              <h2>${products.calorie} Ккал</h2>
             </article>
             <article>
               <img src="images/condition/keep.webp"></img>
               <p>ХАДГАЛАХ ХУГАЦАА</p>
-              <h3>${products.keep_date} хоног</h3>
+              <h2>${products.keep_date} хоног</h2>
             </article>
             <article>
               <img src="images/condition/celsius.webp"></img>
               <p>ХАДГАЛАХ НӨХЦӨЛ</p>
-              <h3>${products.keep_condition}</h3>
+              <h2>${products.keep_condition}</h2>
             </article>
           </section>
           <section class="product-description">
