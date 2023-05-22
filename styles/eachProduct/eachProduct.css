@@ -1,6 +1,8 @@
 @import url('../root.css');
 
 body{
+    width: 100%;
+    height: 100%;
     font-family: var(--inter-font);
     background-color: var(--bg-color);
     margin: 0;

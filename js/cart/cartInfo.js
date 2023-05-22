@@ -51,6 +51,7 @@ class CartInfo extends HTMLElement {
         cursor: pointer;
       }
     `;
+    this.price = 0;
   }
 
     // this is render function
@@ -85,8 +86,8 @@ class CartInfo extends HTMLElement {
         // when payment button is clicked it will show popupPay component
         const paymentBtn = this.shadowRoot.querySelector('#payment_btn')
 
-        paymentBtn.addEventListener('pointerdown',()=>{
-          const popup = new PopupPay();
+        paymentBtn.addEventListener('pointerdown',async()=>{
+          const popup = new PopupPay(this.price);
           popup.showPopup();
         })
   }
@@ -95,7 +96,6 @@ class CartInfo extends HTMLElement {
     // when component is connected to DOM this function will be fired
 
   connectedCallback() {
-
 
     this.#Render(localStorage.getItem("quantity"));
     

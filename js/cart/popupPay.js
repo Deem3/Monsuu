@@ -1,10 +1,12 @@
 import { PaymentPopup } from "./paymentPopup.js";
 
 export class PopupPay extends HTMLElement {
-  constructor() {
+  constructor(price) {
     super();
     // adding shadowDom
     this.attachShadow({ mode: "open" });
+    this.sum = {}
+    this._price = price;
     // style template
     this.attrStyle = `
             @import url('/styles/root.css');
@@ -53,26 +55,34 @@ export class PopupPay extends HTMLElement {
             }
             .apartment{
               position: absolute;
-              top: 28px;
               left: 0.675rem;
+              top: 20px;
               pointer-events: none;
+              color: #7E7E7E;
             }
             form>div>input:valid~.apartment, form>div>input:focus~.apartment{
-              font-size: 0.6em;
+              font-size: 0.8em;
               color: #7E7E7E;
-              transform: translateY(-1.5rem);
+              transform: translateY(-1.7rem);
+              background-color: white;
+              transition: all 0.3s linear;
+              duration: 0.3s;
             }
 
             .phone{
               position: absolute;
               left: 0.675rem;
-              top: 28px;
+              top: 20px;
               pointer-events: none;
+              color: #7E7E7E;
             }
             form>div>input:valid~.phone, form>div>input:focus~.phone{
-              font-size: 0.6em;
+              font-size: 0.8em;
               color: #7E7E7E;
-              transform: translateY(-1.5rem);
+              transform: translateY(-1.7rem);
+              background-color: white;
+              transition: all 0.3s linear;
+              duration: 0.3s;
           }
 
 
@@ -145,11 +155,11 @@ export class PopupPay extends HTMLElement {
                         </select>
                     </div>
                     <div>
-                        <input type="text" placeholder="Гараар оруулна уу"></input>
+                        <input type="text" required></input>
                         <span class="apartment">Байр, тоот</span>
                     </div>
                     <div>
-                        <input type="number" placeholder="Гараар оруулна уу"></input>
+                        <input type="number" required></input>
                         <span class="phone">Утасны дугаар</span>
                     </div>
                     <button id="next_btn" class="next_btn" type="button">Захиалах</button>
@@ -176,11 +186,53 @@ export class PopupPay extends HTMLElement {
     }
     const nextBtn = this.shadowRoot.querySelector('#next_btn');
     if(nextBtn){
-        nextBtn.addEventListener('pointerdown', ()=>{
+        nextBtn.addEventListener('pointerdown', async ()=>{
+          // get values from inputs
+              const district = this.shadowRoot.querySelector('#district').value;
+              const khoroo = this.shadowRoot.querySelector('#khoroo').value;
+              const apartment = this.shadowRoot.querySelector('input[type="text"]').value;
+              const phone = this.shadowRoot.querySelector('input[type="number"]').value;
+              const price = this._price
+
+
+              // check if the inputs aren't empty
+            if(apartment !== '' || phone !== ''){
             const payment = new PaymentPopup()
             payment.showPaymentPopup();
             this.remove();
-        })
+            try {
+              const response = await fetch('http://localhost:4000/api/');
+              const products = await response.json();
+              products.forEach(product => {
+                if (localStorage.getItem(product._id) != null) {
+                  const p = product._id;
+                  const q = parseInt(localStorage.getItem(product._id));
+                  this.sum[p] = q;
+                }
+              });
+              // Send the order to the server
+              
+              const data = {district, khoroo, apartment, phone, ["products"]: this.sum, price}
+
+              const token = document.cookie.split('=')[1]
+              const result = await fetch('http://localhost:4000/order/', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': token
+                }
+              })
+              if(result.ok){
+                alert('Order created successfully')
+              }else{
+                alert('Order creation failed')
+              }
+              ;
+            } catch (error) {
+              console.log(error);
+            }
+    }})
     }
   }
 
