@@ -40,14 +40,14 @@ class CartInfo extends HTMLElement {
         width: 50%;
         justify-self: center;
         height: 4.125rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
         border-radius: 0.5625rem;
         background-color: #424242;
         color: white;
         font-size: 18px;
         font-weight: 500;
         font-family: var(--inter-font);
-        margin-top: 1.5rem;
-        margin-bottom: 1.5rem;
         cursor: pointer;
       }
     `;

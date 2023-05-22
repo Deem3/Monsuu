@@ -9,30 +9,30 @@ export class PopupPay extends HTMLElement {
     this.attrStyle = `
             @import url('/styles/root.css');
             section{
-                background-color: rgba(0,0,0,0.5);
-                position: fixed;
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                margin: 0;
-                padding: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-family: var(--inter-font);
+              width: 100%;
+              position: fixed;
+              height: 100%;
+              top: 0;
+              left: 0;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: rgba(0,0,0,0.5);
+              font-family: var(--inter-font);
             }
             form{
                 position: relative;
                 background-color: white;
-                opacity: 100%;
                 width: 50%;
                 height: 70%;
                 border-radius: 9px;
-                overflow: hidden;
                 display: grid;
                 grid-template-rows: repeat(6, 1fr);
                 justify-items: center;
+                opacity: 100%;
+                overflow: hidden;
             }
             form>div{
                 position: relative;
@@ -45,22 +45,22 @@ export class PopupPay extends HTMLElement {
                 border-radius: 12px;
             }
             form>div>input{
-                box-sizing: border-box;
-                outline: none;
-                padding: 10px;
-                font-size: 1em;
-                font-family: var(--inter-font);
+              padding: 10px;
+              box-sizing: border-box;
+              outline: none;
+              font-size: 1em;
+              font-family: var(--inter-font);
             }
             .apartment{
-                position: absolute;
-                left: 0.675rem;
-                top: 28px;
-                pointer-events: none;
+              position: absolute;
+              top: 28px;
+              left: 0.675rem;
+              pointer-events: none;
             }
             form>div>input:valid~.apartment, form>div>input:focus~.apartment{
-                transform: translateY(-1.5rem);
-                font-size: 0.6em;
-                color: #7E7E7E;
+              font-size: 0.6em;
+              color: #7E7E7E;
+              transform: translateY(-1.5rem);
             }
 
             .phone{
@@ -70,32 +70,32 @@ export class PopupPay extends HTMLElement {
               pointer-events: none;
             }
             form>div>input:valid~.phone, form>div>input:focus~.phone{
-              transform: translateY(-1.5rem);
               font-size: 0.6em;
               color: #7E7E7E;
+              transform: translateY(-1.5rem);
           }
 
 
             .exit_btn{
-                position: absolute;
-                top: 1rem;
-                right: 2rem;
-                border: none;
-                background-color: transparent;
-                font-size: 2rem;
-                cursor: pointer;
-                width: fit-content;
+              width: fit-content;
+              position: absolute;
+              top: 1rem;
+              right: 2rem;
+              border: none;
+              background-color: transparent;
+              font-size: 2rem;
+              cursor: pointer;
             }
             .next_btn{
-              cursor: pointer;
-              background-color: var(--primary-color);
-              color: white;
               font-size: 1.2rem;
               width: 20rem;
               height: 3.5rem;
               padding: 0;
               border: 1px solid black;
               border-radius: 12px;
+              background-color: var(--primary-color);
+              color: white;
+              cursor: pointer;
             }
 
             .district, .khoroo{

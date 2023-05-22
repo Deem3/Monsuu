@@ -15,8 +15,8 @@ class ProductList extends HTMLElement {
     article{
         display: flex;
         flex-direction: column;
-        align-items: center;
         position: relative;
+        align-items: center;
     }
     .product-img{
         width: 6.25rem;
@@ -62,9 +62,9 @@ class ProductList extends HTMLElement {
             grid-template-rows: 1fr;
             align-items: center;
             justify-items: center;
-            border-top: 1px solid gray;
             margin-top: 1.25rem;
             width: 50%;
+            border-top: 1px solid gray;
         }
         
         .product-info>p{

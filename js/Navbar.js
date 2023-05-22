@@ -155,24 +155,24 @@ class Navbar extends HTMLElement {
     display: block;
     position: absolute;
     top: 2.8125rem;
-    background-color: #dddddd;
     width: 10rem;    
     height: 10rem;
     border-radius: 6px;
+    border: 1px #272f89 solid
+    background-color: #dddddd;
     transition-duration: 600ms;
     transition: ease-in-out;
-    border: 1px #272f89 solid
   `;
     this.login_dropdown_styled = `
-    overflow: hidden;
     display: block;
     position: absolute;
-    background-color: #dddddd;
-    border: 1px #272f89 solid;
-    border-radius: 6px;
+    right: 6px;
     width: 8rem;
     height: 8rem;
-    right: 6px;
+    border: 1px #272f89 solid;
+    border-radius: 6px;
+    background-color: #dddddd;
+    overflow: hidden;
   `;
     this.innerHTML = `
     <nav>

@@ -11,7 +11,6 @@ export class PaymentPopup extends HTMLElement {
         this.attrStyle = `
         @import url('/styles/root.css');
         section{
-            background-color: rgba(0,0,0,0.5);
             position: fixed;
             width: 100%;
             height: 100%;
@@ -22,20 +21,21 @@ export class PaymentPopup extends HTMLElement {
             display: flex;
             justify-content: center;
             align-items: center;
+            background-color: rgba(0,0,0,0.5);
             font-family: var(--inter-font);
         }
         section>div{
             position: relative;
-                background-color: white;
-                opacity: 100%;
-                width: 50%;
-                height: 70%;
-                border-radius: 9px;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            width: 50%;
+            height: 70%;
+            display: flex;
+            border-radius: 9px;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            opacity: 100%;
+            overflow: hidden;
         }
         
         .container{
@@ -71,21 +71,21 @@ export class PaymentPopup extends HTMLElement {
         }
         .exit_btn{
             position: absolute;
-                top: 2rem;
-                right: 2rem;
-                border: none;
-                background-color: transparent;
-                font-size: 2rem;
-                cursor: pointer;
+            top: 2rem;
+            right: 2rem;
+            border: none;
+            background-color: transparent;
+            font-size: 2rem;
+            cursor: pointer;
         }
         .back_btn{
             position: absolute;
-                top: 2rem;
-                left: 2rem;
-                border: none;
-                background-color: transparent;
-                font-size: 2rem;
-                cursor: pointer;
+            top: 2rem;
+            left: 2rem;
+            border: none;
+            background-color: transparent;
+            font-size: 2rem;
+            cursor: pointer;
         }
         `;
     }

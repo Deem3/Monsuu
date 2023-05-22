@@ -57,7 +57,6 @@ class CreateProduct extends HTMLElement {
         const btn = this.shadowRoot.getElementById('submitButton');
         btn.addEventListener('click', async (e)=>{
             e.preventDefault()
-            console.log(this.shadowRoot.querySelectorAll('input')[0].value)
             const _id = this.shadowRoot.querySelectorAll('input')[0].value;
             const name = this.shadowRoot.querySelectorAll('input')[1].value;
             const weight = this.shadowRoot.querySelectorAll('input')[2].value;
@@ -75,7 +74,7 @@ class CreateProduct extends HTMLElement {
             const token = document.cookie.split('=')[1]
 
             const result = await fetch('http://localhost:4000/api/', {
-                method: 'POST',
+                method: "POST",
                 body: JSON.stringify(data),
                 headers:{
                     'Content-Type': 'application/json',

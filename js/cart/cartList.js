@@ -18,14 +18,14 @@ export class CartList extends HTMLElement {
             .cart-item {
                 display:grid;
                 grid-template-columns: 1fr 1fr 2fr;
-                border: 1px solid #dfdfdf;
-                border-radius: 9px;
                 width: 36rem;
                 height: 9.5rem;
                 align-items: center;
                 justify-items: center;
                 margin-bottom: 15px;
                 margin-top: 15px;
+                border-radius: 9px;
+                border: 1px solid #dfdfdf;
             }
             .cart-img{
                 width: 150px;
@@ -51,12 +51,12 @@ export class CartList extends HTMLElement {
                 height: 100%;
             }
             .delete-btn{
-                background-color: white;
-                border: 3px solid black;
-                border-radius: 3px;
-                width: 1.875rem;
-                height: 1.875rem;
-                font-weight: bold;
+              width: 1.875rem;
+              height: 1.875rem;
+              border: 3px solid black;
+              border-radius: 3px;
+              font-weight: bold;
+              background-color: white;
             }
             .counter-btn{
                 display:inline-flex;
