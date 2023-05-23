@@ -81,24 +81,19 @@
 
 class ProductDetails {
   constructor() {
-    // Create an empty object to store product data
     this.product = {};
     this.id = localStorage.getItem('id');
 
-    // Call the render method to render the product details
     this.render();
   }
 
   render() {
 
-    // Fetch the product data
     fetch('/json/products.json')
       .then((response) => response.json())
       .then(data => {
-        // Find the product with the matching ID
         this.products = data.products.find(product => product._id == this.id);
 
-        // Render the product details
         const container = document.getElementById('productClass');
         container.innerHTML = `
                 <section class="main">
@@ -155,5 +150,4 @@ class ProductDetails {
   }
 }
 
-// Create a new instance of the ProductDetails class
 const productDetails = new ProductDetails();
