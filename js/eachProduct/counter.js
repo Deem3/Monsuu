@@ -2,7 +2,7 @@
 
 
 // observing dom changes
-const targetNode = document.querySelector('product-details')
+const targetNode = document.querySelector('#productClass')
 console.log(targetNode)
 
 var loaded = false;
