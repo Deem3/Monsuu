@@ -12,6 +12,7 @@ export class Warning extends HTMLElement {
         <style>
         .container{
           background-color: red;
+          color: dark;
           width: 20rem;
           border-radius: 6px;
         }
@@ -19,6 +20,7 @@ export class Warning extends HTMLElement {
         @media(prefers-color-scheme: dark) {
           .container{
             background-color: rgb(142, 1, 1);
+            color: white;
             width: 20rem;
             border-radius: 6px;
           }
