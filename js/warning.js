@@ -5,14 +5,13 @@ export class Warning extends HTMLElement {
     // this.shadowRoot.querySelector('.warning-template')
     this.message = msg;
     this.code = code;
-    this.themeTogler = false;
   }
 
   Render(code, msg) {
     this.shadowRoot.innerHTML = `
         <style>
         .container{
-          background-color: ${this.themeTogler === true ? 'rgb(142, 1, 1)' : 'red'};
+          background-color: red;
           width: 20rem;
           border-radius: 6px;
         }
@@ -50,13 +49,20 @@ export class Warning extends HTMLElement {
 
   attributeChangedCallback(name, oldVal, newVal) {
     switch (name) {
-      case "theme":
+      case "text":
         switch (newVal) {
-          case "dark":
-            this.themeTogler = true;
+          case "md":
+            this.shadowRoot.getElementById("headline").style.fontSize = "0.5rem";
             break;
-          case "light":
-            this.themeTogler = false;
+          case "lg":
+            this.shadowRoot.getElementById("headline").style.fontSize = "1rem";
+            break;
+          case "xl":
+            this.shadowRoot.getElementById("headline").style.color = "2rem";
+            console.log('hello')
+            break;
+          case "xxl":
+            this.shadowRoot.getElementById("headline").style.fontSize = "3rem";
             break;
         }
         break;
@@ -64,14 +70,18 @@ export class Warning extends HTMLElement {
         switch (newVal) {
           case "red":
             this.shadowRoot.getElementById("headline").style.color = "red";
+            this.shadowRoot.getElementById("context").style.color = "red";
             break;
           case "blue":
             this.shadowRoot.getElementById("headline").style.color = "blue";
+            this.shadowRoot.getElementById("context").style.color = "blue";
             break;
           case "white":
             this.shadowRoot.getElementById("headline").style.color = "white";
+            this.shadowRoot.getElementById("context").style.color = "white";
             break;
           case "black":
+            this.shadowRoot.getElementById("headline").style.color = "black";
             this.shadowRoot.getElementById("headline").style.color = "black";
             break;
         }
@@ -80,7 +90,7 @@ export class Warning extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["color", "theme"];
+    return ["color", "text"];
   }
 
   adoptedCallback() {
