@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сагс</title>
 
     <!-- favico -->
-    <link rel="shortcut icon" href="/images/favico/favicon.ico" type="image/x-icon">
-  
+    <link
+      rel="shortcut icon"
+      href="/images/favico/favicon.ico"
+      type="image/x-icon"
+    />
 
     <!-- css -->
     <link rel="stylesheet" href="styles/global style/navbar.css" />
     <link rel="stylesheet" href="styles/global style/footer.css" />
-    <link rel="stylesheet" href="styles/cart/cart.css">
+    <link rel="stylesheet" href="styles/cart/cart.css" />
 
     <!-- mobile style -->
-    <link rel="stylesheet" href="styles/global style/navbar.mobile.css">
-    <link rel="stylesheet" href="styles/global style/footer.mobile..css">
+    <link rel="stylesheet" href="styles/global style/navbar.mobile.css" />
+    <link rel="stylesheet" href="styles/global style/footer.mobile..css" />
 
     <!-- javascript -->
     <script type="module" src="js/Navbar.js" defer></script>
@@ -26,24 +29,28 @@
     <script type="module" src="js/cart/cartInfo.js" async></script>
     <script type="module" src="js/cart/popupPay.js" async></script>
     <script type="module" src="js/cart/paymentPopup.js"></script>
-
-</head>
-<body>
+    <script type="module" src="js/warning.js"></script>
+  </head>
+  <body>
     <header id="Header">
-          <nav-bar></nav-bar>
+      <nav-bar></nav-bar>
     </header>
     <main>
+      <div class="wc-container">
+        <wc-warning color theme="dark">
+      </wc-warning>
+      </div>
       <section id="first" class="first_section">
         <h2>Барааны жагсаалт</h2>
-        <cart-list></cart-list>
+        <cart-list theme="mode"></cart-list>
       </section>
       <section id="second" class="second_section">
         <h2>Сагсны мэдээлэл</h2>
         <cart-info></cart-info>
       </section>
-        <popup-pay></popup-pay>
-        <payment-popup></payment-popup>
+      <popup-pay></popup-pay>
+      <payment-popup></payment-popup>
     </main>
     <footer id="Footer"></footer>
-</body>
+  </body>
 </html>

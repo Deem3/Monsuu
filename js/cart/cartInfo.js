@@ -93,6 +93,7 @@ class CartInfo extends HTMLElement {
   }
 
 
+
     // when component is connected to DOM this function will be fired
 
   connectedCallback() {
@@ -105,6 +106,7 @@ class CartInfo extends HTMLElement {
       .then((res) => res.json())
       .then((products) => {
         products.forEach((product) => {
+                                      1
           if (localStorage.getItem(product._id) != null) {
             this.price = this.price + parseInt(localStorage.getItem(product._id)) * product.price;
             this.#Render(localStorage.getItem("quantity"));

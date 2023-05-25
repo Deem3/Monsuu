@@ -129,7 +129,6 @@ export class CartList extends HTMLElement {
       });
       this.dispatchEvent(event);
     });
-
     minusBtn.addEventListener("pointerdown", () => {
       const currentValue = parseInt(input.value);
       if (currentValue > 1) {
@@ -220,7 +219,7 @@ export class CartList extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldVal, newVal) {
-    //implementation
+    console.log(name, oldVal, newVal)
   }
 
   adoptedCallback() {
