@@ -15,6 +15,11 @@ export class Warning extends HTMLElement {
           color: dark;
           width: 20rem;
           border-radius: 6px;
+          display: grid;
+        }
+        .close{
+          background-color: white;
+          color: red;
         }
 
         @media(prefers-color-scheme: dark) {
@@ -23,6 +28,11 @@ export class Warning extends HTMLElement {
             color: white;
             width: 20rem;
             border-radius: 6px;
+            display: grid;
+          }
+          .close{
+            background-color: white;
+            color: red;
           }
         }
           
@@ -30,7 +40,7 @@ export class Warning extends HTMLElement {
         <div class="container">
           <h1 id="headline" class="headline">Error</h1>
           <p id="context" class="context">something went wrong</p>
-          <button id="closeBtn">x</button>
+          <button class="close" id="closeBtn">x</button>
         </div>
       `;
   }
@@ -54,14 +64,15 @@ export class Warning extends HTMLElement {
       case "text":
         switch (newVal) {
           case "md":
-            this.shadowRoot.getElementById("headline").style.fontSize = "0.5rem";
+            this.shadowRoot.getElementById("headline").style.fontSize =
+              "0.5rem";
             break;
           case "lg":
             this.shadowRoot.getElementById("headline").style.fontSize = "1rem";
             break;
           case "xl":
             this.shadowRoot.getElementById("headline").style.color = "2rem";
-            console.log('hello')
+            console.log("hello");
             break;
           case "xxl":
             this.shadowRoot.getElementById("headline").style.fontSize = "3rem";
