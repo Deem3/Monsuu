@@ -64,14 +64,13 @@ export class Warning extends HTMLElement {
       case "text":
         switch (newVal) {
           case "md":
-            this.shadowRoot.getElementById("headline").style.fontSize =
-              "0.5rem";
+            this.shadowRoot.getElementById("headline").style.fontSize = "0.5rem";
             break;
           case "lg":
             this.shadowRoot.getElementById("headline").style.fontSize = "1rem";
             break;
           case "xl":
-            this.shadowRoot.getElementById("headline").style.color = "2rem";
+            this.shadowRoot.getElementById("headline").style.fontSize = "2rem";
             console.log("hello");
             break;
           case "xxl":
@@ -95,7 +94,7 @@ export class Warning extends HTMLElement {
             break;
           case "black":
             this.shadowRoot.getElementById("headline").style.color = "black";
-            this.shadowRoot.getElementById("headline").style.color = "black";
+            this.shadowRoot.getElementById("context").style.color = "black";
             break;
         }
         break;
