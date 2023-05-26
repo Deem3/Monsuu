@@ -49,7 +49,7 @@ export class Warning extends HTMLElement {
     this.Render();
     setTimeout(() => {
       this.shadowRoot.innerHTML = "";
-    }, 10000);
+    }, 30000);
     this.shadowRoot.getElementById("closeBtn").addEventListener("click", () => {
       this.remove();
     });
@@ -78,7 +78,7 @@ export class Warning extends HTMLElement {
             break;
         }
         break;
-      case "color":
+      case "ungu":
         switch (newVal) {
           case "red":
             this.shadowRoot.getElementById("headline").style.color = "red";
@@ -102,7 +102,7 @@ export class Warning extends HTMLElement {
   }
 
   static get observedAttributes() {
-    return ["color", "text"];
+    return ["ungu", "text"];
   }
 
   adoptedCallback() {

@@ -198,9 +198,10 @@ export class CartList extends HTMLElement {
     fetch("http://localhost:4000/api/")
       .then((res) => res.json())
       .then((products) => {
-        // getting the products from the jsonbin
+        // getting the product
         // looping through the products
         products.forEach((product) => {
+
 
           // checking if the product is in the local storage or not
           if (localStorage.getItem(product._id) != null) {
